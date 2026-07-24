@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Friday Edition — The Girl in Finance</title>
+<meta name="description" content="The Girl in Finance — Friday Edition. Money news, personal finance and investment, explained calmly. Updated every Friday.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .nl-mini-hero { text-align:center; padding:56px 24px 6px; background:radial-gradient(120% 90% at 50% 0%, #2A2550 0%, #1A1735 45%, var(--deep-space) 100%); }
+  .nl-mini-hero .eyebrow { color:var(--gold); }
+  .nl-mini-hero h1 { font-size:clamp(38px,6vw,60px); line-height:1; margin-bottom:12px; }
+  .nl-mini-hero p { color:var(--mauve); font-size:15px; }
+  .nl-frame-wrap { max-width:760px; margin:0 auto; padding:26px 12px 56px; }
+  iframe#issue { width:100%; border:0; display:block; background:#0B0A18; border-radius:14px; min-height:1600px; }
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="nav-logo" href="index.html"><img src="assets/emblem-dark.png" alt="The Girl in Finance"></a>
+    <div class="nav-links">
+      <a href="index.html#learn" class="nav-link">Learn</a>
+      <a href="index.html#watch" class="nav-link">Watch</a>
+      <a href="work-with-me.html" class="nav-link">Work with me</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="newsletter.html" class="nav-link active">Newsletter</a>
+      <a href="index.html#join" class="nav-link btn btn-gold">Free budget kit</a>
+    </div>
+  </nav>
+
+  <header class="nl-mini-hero">
+    <div class="eyebrow">The Friday Edition</div>
+    <h1 class="serif">This week in money.</h1>
+    <p>Updated every Friday · a calm, weekly read</p>
+  </header>
+
+  <div class="nl-frame-wrap">
+    <iframe id="issue" src="issue.html" title="This week's edition" scrolling="no"></iframe>
+  </div>
+
+  <footer class="footer-simple">
+    <div class="wrap">
+      <div class="footer-simple-brand">
+        <img src="assets/emblem-dark.png" alt="The Girl in Finance">
+        <span>© 2026 The Girl in Finance · Educational content, not financial advice.</span>
+      </div>
+      <a href="index.html" class="footer-back">← Back to home</a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var f = document.getElementById('issue');
+      function resize() {
+        try {
+          var h = f.contentWindow.document.body.scrollHeight;
+          if (h && h > 200) f.style.height = (h + 40) + 'px';
+        } catch (e) { /* leave min-height */ }
+      }
+      f.addEventListener('load', resize);
+      setTimeout(resize, 500);
+      setTimeout(resize, 1500);
+      window.addEventListener('resize', resize);
+    })();
+  </script>
+</body>
+</html>

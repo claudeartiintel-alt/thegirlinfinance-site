@@ -1,0 +1,4 @@
+# The site is plain static HTML — no build step. Netlify serves the repo root.
+[build]
+  publish = "."
+  command = ""

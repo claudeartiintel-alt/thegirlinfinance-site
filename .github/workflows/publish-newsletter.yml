@@ -1,0 +1,42 @@
+name: Publish weekly newsletter
+
+# Runs every Friday at 05:00 UTC (08:00 Bahrain) — after the Friday-morning
+# email task has sent the issue — fetches it, and commits it. Netlify then
+# auto-deploys the change. You can also run it by hand from the Actions tab.
+on:
+  schedule:
+    - cron: "0 5 * * 5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch this week's issue into issue.html
+        env:
+          AGENTMAIL_API_KEY: ${{ secrets.AGENTMAIL_API_KEY }}
+          AGENTMAIL_INBOX: eric0649@agentmail.to
+        run: python scripts/fetch_issue.py
+
+      - name: Commit and push if the issue changed
+        run: |
+          git config user.name "girl-in-finance-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add issue.html
+          if git diff --staged --quiet; then
+            echo "No change this run."
+          else
+            git commit -m "Publish weekly newsletter issue"
+            git push
+          fi
