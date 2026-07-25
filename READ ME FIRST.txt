@@ -1,0 +1,35 @@
+HOLDING MODE — The Girl in Finance
+==================================
+
+WHAT THIS DOES
+Puts "Site under construction" in front of the whole site. Every address
+on thegirlinfinance.com shows the holding page, including direct links to
+blog.html, work-with-me.html and newsletter.html.
+
+
+TO TURN IT ON
+1. Copy BOTH files in this folder into your local repo folder, replacing
+   the existing index.html and netlify.toml.
+2. In GitHub Desktop: check that BOTH files show as changed, write a
+   message such as "Holding page on", click Commit, then click Push.
+3. Wait about one minute for Netlify to finish deploying.
+4. Check the site in a private/incognito window. A normal window may show
+   you a cached copy of the old page.
+
+Both files are needed. index.html alone changes the homepage only; the
+rest of the site stays reachable.
+
+
+TO TURN IT OFF (put the real site back)
+1. Take index.html and netlify.toml from the full site zip
+   (The Girl in Finance - GitHub Repo - vs2507261329.zip, or a later one).
+2. Copy them into the repo folder, replacing the two holding-mode files.
+3. Commit and push. The site returns in about a minute.
+
+Nothing is deleted. The real site sits untouched in the zip the whole time.
+
+
+NOTE
+The holding page carries a "noindex" instruction, so Google will not list
+it while it is up. Search results for the real site are not affected once
+you switch back.

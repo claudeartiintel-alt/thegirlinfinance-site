@@ -2,3 +2,18 @@
 [build]
   publish = "."
   command = ""
+
+# ---------------------------------------------------------------------------
+# HOLDING MODE — every URL on the site serves the "Site under construction"
+# page. This is what makes the holding page cover the WHOLE site, not just the
+# homepage: without it, blog.html / work-with-me.html / newsletter.html stay
+# reachable by direct link.
+#
+# TO PUT THE REAL SITE BACK: delete this whole block (down to the end of the
+# file), restore the real index.html, then commit and push.
+# ---------------------------------------------------------------------------
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
