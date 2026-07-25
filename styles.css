@@ -178,6 +178,11 @@ section { padding: 110px 40px; }
 .stack-form textarea { resize: vertical; }
 .stack-form .btn-dark { padding: 16px; border-radius: 12px; }
 .hp-field { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; }
+/* Sign-up intent choice (newsletter forms) */
+.pill-choice { flex: 1 1 100%; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 2px; }
+.pill-choice > span { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #3d2f14; }
+.pill-form select { font-family: 'Manrope', sans-serif; font-size: 15px; padding: 14px 46px 14px 20px; border-radius: 100px; border: none; background-color: #FFFDF8; color: var(--ink-navy); outline: none; cursor: pointer; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231E1B38' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 18px center; flex: 0 1 330px; min-width: 0; max-width: 100%; }
+
 
 /* ---------- FOOTER ---------- */
 footer { background: var(--footer-bg); padding: 60px 40px 40px; }

@@ -135,6 +135,14 @@
       <form class="pill-form" name="newsletter-blog" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" style="max-width: 500px;">
         <input type="hidden" name="form-name" value="newsletter-blog">
         <p class="hp-field"><label>Don't fill this out: <input name="bot-field" type="text"></label></p>
+        <label class="pill-choice">
+          <span>What would you like?</span>
+          <select name="wants">
+            <option>The free budget kit + weekly note</option>
+            <option>Just the weekly newsletter</option>
+            <option>Just the budget kit</option>
+          </select>
+        </label>
         <input type="email" name="email" placeholder="you@email.com" required>
         <button type="submit" class="btn btn-dark">Subscribe</button>
       </form>
