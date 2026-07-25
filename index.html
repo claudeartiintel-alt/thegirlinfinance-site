@@ -3,221 +3,116 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Girl in Finance — Money, made beautifully simple</title>
-<meta name="description" content="Honest, elegant, jargon-free money guidance — from your first budget to your next investment. Wherever you are on the journey, come along.">
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<title>Site under construction</title>
+<meta name="description" content="This site is currently under construction.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:,">
+<style>
+  :root {
+    --bg: #F7F6F4;
+    --ink: #1C1C1A;
+    --muted: #7A7873;
+    --rule: #E3E0DA;
+    --sweep: #B2AFA7;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  main {
+    max-width: 520px;
+    width: 100%;
+    animation: rise 0.9s ease both;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(27px, 5.6vw, 44px);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  p {
+    margin: 20px auto 0;
+    max-width: 440px;
+    font-size: clamp(15px, 2.4vw, 17px);
+    line-height: 1.65;
+    color: var(--muted);
+    font-weight: 400;
+    text-wrap: balance;
+  }
+
+  .rule {
+    width: 132px;
+    height: 2px;
+    margin: 38px auto 0;
+    border-radius: 2px;
+    background: var(--rule);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .rule::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 42%;
+    border-radius: 2px;
+    background: var(--sweep);
+    animation: sweep 2.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  }
+
+  @keyframes sweep {
+    0%   { transform: translateX(-110%); }
+    50%  { transform: translateX(150%); }
+    100% { transform: translateX(150%); }
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    main { animation: none; }
+    .rule::after { animation: none; width: 42%; transform: none; }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131312;
+      --ink: #F2F1EE;
+      --muted: #8E8C87;
+      --rule: #2B2B29;
+      --sweep: #55534E;
+    }
+  }
+</style>
 </head>
 <body>
-
-  <!-- NAV -->
-  <nav class="nav">
-    <a class="nav-logo" href="index.html"><img src="assets/emblem-dark.png" alt="The Girl in Finance"></a>
-    <div class="nav-links">
-      <a href="#learn" class="nav-link">Learn</a>
-      <a href="#watch" class="nav-link">Watch</a>
-      <a href="work-with-me.html" class="nav-link">Work with me</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="newsletter.html" class="nav-link">Newsletter</a>
-      <a href="#join" class="nav-link btn btn-gold">Free budget kit</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <header class="hero hero-home">
-    <div class="hero-inner">
-      <img class="hero-logo" src="assets/wordmark-clear.png" alt="The Girl in Finance">
-      <div class="hero-eyebrow">Money, made beautifully simple</div>
-      <h1>Grow your money.<br><span class="serif" style="font-style: italic; color: var(--gold);">Grow into</span> yourself.</h1>
-      <p class="lead">Honest, elegant, jargon-free money guidance — from your first budget to your next investment. Wherever you are on the journey, come along. One clear lesson at a time.</p>
-      <p class="ar ar-tag">مالُكِ… بثقةٍ وأناقة</p>
-      <div class="hero-ctas">
-        <a href="#join" class="btn btn-pink">Get the free budget kit</a>
-        <a href="#watch" class="btn btn-outline">Watch the videos →</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- TRUST STRIP -->
-  <div class="trust-strip">
-    <div class="wrap">
-      <span class="trust-label">Find us on</span>
-      <div class="trust-names">
-        <a href="https://www.youtube.com/@itsthegirlinfinance" target="_blank" rel="noopener">YouTube</a><span class="dot">•</span><a href="https://www.tiktok.com/@itsthegirlinfinance" target="_blank" rel="noopener">TikTok</a><span class="dot">•</span><a href="https://www.instagram.com/itsthegirlinfinance" target="_blank" rel="noopener">Instagram</a><span class="dot">•</span><a href="newsletter.html">Newsletter</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- LEARN / PILLARS -->
-  <section id="learn">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Start here</div>
-        <h2>Whatever stage you're at, there's a step for you.</h2>
-      </div>
-      <div class="grid-4">
-        <div class="card pillar-card">
-          <div class="pillar-icon">◆</div>
-          <h3>Budget &amp; save</h3>
-          <p>Take control of your money without giving up your life. Simple systems that stick.</p>
-        </div>
-        <div class="card pillar-card">
-          <div class="pillar-icon">✦</div>
-          <h3>Money mindset</h3>
-          <p>Rewrite the money story you inherited. Confidence is the first asset.</p>
-        </div>
-        <div class="card pillar-card">
-          <div class="pillar-icon">↗</div>
-          <h3>First investing</h3>
-          <p>Demystified, step by step. Start small, start informed, start today.</p>
-        </div>
-        <div class="card pillar-card">
-          <div class="pillar-icon">◈</div>
-          <h3>Weekly recap</h3>
-          <p>The money news that matters, explained plainly. <span style="color: var(--gold);">Coming soon.</span></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WATCH -->
-  <section id="watch" class="section-light">
-    <div class="wrap">
-      <div class="section-head-row">
-        <div>
-          <div class="eyebrow">Latest videos</div>
-          <h2>This week on the channel</h2>
-        </div>
-        <a href="blog.html" class="view-all">View all →</a>
-      </div>
-      <div class="grid-3">
-        <a href="#" class="video-card">
-          <div class="video-thumb">
-            <div class="video-tag">Budget Basics</div>
-            <div class="video-title">Save your first 1,000 — without the stress</div>
-            <div class="video-play">▶</div>
-          </div>
-          <div class="video-meta"><span>8:24</span><span>New</span></div>
-        </a>
-        <a href="#" class="video-card">
-          <div class="video-thumb">
-            <div class="video-tag">Mindset</div>
-            <div class="video-title">Stop feeling behind with money</div>
-            <div class="video-play">▶</div>
-          </div>
-          <div class="video-meta"><span>6:10</span><span>New</span></div>
-        </a>
-        <a href="#" class="video-card">
-          <div class="video-thumb">
-            <div class="video-tag">Investing 101</div>
-            <div class="video-title">What actually is an index fund?</div>
-            <div class="video-play">▶</div>
-          </div>
-          <div class="video-meta"><span>11:02</span><span>New</span></div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- WORK WITH ME (teaser) -->
-  <section id="work" class="section-navy">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Work with me</div>
-        <h2>Ready for more than free?</h2>
-      </div>
-      <div class="grid-3">
-        <div class="card offer-card">
-          <h3>Templates &amp; guides</h3>
-          <p>Beautiful budget and savings templates that do the thinking for you.</p>
-          <div class="from">From <strong>free</strong></div>
-        </div>
-        <div class="card offer-card popular">
-          <span class="popular-badge">Popular</span>
-          <h3>Live classes</h3>
-          <p>Small, friendly cohorts. Learn budgeting or investing basics in one evening.</p>
-          <div class="from" style="color:#B9AECB;">Waitlist <strong>open</strong></div>
-        </div>
-        <div class="card offer-card">
-          <h3>The membership</h3>
-          <p>A warm community, monthly money challenges, and accountability as you grow.</p>
-          <div class="from"><strong>Coming soon</strong></div>
-        </div>
-      </div>
-      <div class="work-teaser-more"><a href="work-with-me.html">See full details →</a></div>
-      <p class="disclaimer">General financial education only — not personalised or regulated financial advice.</p>
-    </div>
-  </section>
-
-  <!-- ABOUT (faceless) -->
-  <section id="about">
-    <div class="wrap about" style="max-width: 1000px;">
-      <img class="about-emblem" src="assets/emblem-dark.png" alt="">
-      <div class="eyebrow">The story</div>
-      <p class="about-quote">I'm the friend who finally makes money make sense — <em>without the lectures.</em> No face, no fuss, no jargon. Just clear guidance, shared honestly, so you can build a life where money is one less thing to worry about.</p>
-      <p class="about-body">This started as a simple belief: women deserve money advice that feels like it was made for them. Elegant, kind, and genuinely useful. That belief is now this channel — and this is only the beginning.</p>
-    </div>
-  </section>
-
-  <!-- JOIN / NEWSLETTER -->
-  <section id="join" class="band-gold">
-    <div class="band-inner">
-      <h2>Get the free budget kit.</h2>
-      <p>Join the newsletter and get the exact template to take control of your money this month — plus a clear weekly note. No spam, unsubscribe anytime.</p>
-      <form class="pill-form" name="newsletter-home" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="newsletter-home">
-        <p class="hp-field"><label>Don't fill this out: <input name="bot-field" type="text"></label></p>
-        <label class="pill-choice">
-          <span>What would you like?</span>
-          <select name="wants">
-            <option>The free budget kit + weekly note</option>
-            <option>Just the weekly newsletter</option>
-            <option>Just the budget kit</option>
-          </select>
-        </label>
-        <input type="email" name="email" placeholder="you@email.com" required>
-        <button type="submit" class="btn btn-dark">Send me the kit</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="wrap">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="assets/emblem-dark.png" alt="The Girl in Finance">
-          <p>Money, made beautifully simple — from your first budget to your next investment.</p>
-        </div>
-        <div class="footer-cols">
-          <div>
-            <div class="footer-col-title">Explore</div>
-            <div class="footer-col">
-              <a href="#learn">Learn</a>
-              <a href="#watch">Watch</a>
-              <a href="work-with-me.html">Work with me</a>
-            </div>
-          </div>
-          <div>
-            <div class="footer-col-title">Follow</div>
-            <div class="footer-col">
-              <a href="https://www.youtube.com/@itsthegirlinfinance" target="_blank" rel="noopener">YouTube</a>
-              <a href="https://www.tiktok.com/@itsthegirlinfinance" target="_blank" rel="noopener">TikTok</a>
-              <a href="https://www.instagram.com/itsthegirlinfinance" target="_blank" rel="noopener">Instagram</a>
-              <a href="newsletter.html">Newsletter</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span class="footer-copy">© 2026 The Girl in Finance. Educational content, not financial advice.</span>
-        <span class="ar footer-ar">مالُكِ… بثقةٍ وأناقة</span>
-      </div>
-    </div>
-  </footer>
-
+  <main>
+    <h1>Site under construction</h1>
+    <p>We are building something here. Please check back soon.</p>
+    <div class="rule" aria-hidden="true"></div>
+  </main>
 </body>
 </html>
